@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decaanbhoomi - Land Digitalization Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="language-modal">
+        <div class="language-content">
+            <h2 id="selectLangText">Select Language / மொழியைத் தேர்ந்தெடுக்கவும்</h2>
+            <div class="language-buttons">
+                <button onclick="setLanguage('en')" class="lang-btn">English</button>
+                <button onclick="setLanguage('ta')" class="lang-btn">தமிழ்</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="earth-container">
+            <div class="earth"></div>
+        </div>
+        <div class="loading-text">
+            <span>D</span><span>E</span><span>C</span><span>A</span><span>A</span><span>N</span><span>B</span><span>H</span><span>O</span><span>O</span><span>M</span><span>I</span>
+        </div>
+    </div>
+
+    <!-- Property Loading Screen -->
+    <div id="propertyLoading" class="property-loading hidden">
+        <div class="property-loading-content">
+            <div class="loading-logo">
+                <span>D</span><span>E</span><span>C</span><span>A</span><span>A</span><span>N</span><span>B</span><span>H</span><span>O</span><span>O</span><span>M</span><span>I</span>
+            </div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div id="whatsappBtn" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mountain"></i>
+                        <h1 data-en="DECAANBHOOMI" data-ta="டெக்கான்பூமி">DECAANBHOOMI</h1>
+                    </div>
+                    <div class="company-info">
+                        <p data-en="A Product of Deccaanow Corp" data-ta="டெக்கானவ் கார்ப்பின் தயாரிப்பு">A Product of Deccaanow Corp</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-title">
+                        <i class="fas fa-home"></i>
+                        <h2 data-en="🏡 DECAANBHOOMI - Your Land, Our Digital Vision 🌱" data-ta="🏡 டெக்கான்பூமி - உங்கள் நிலம், எங்கள் டிஜிட்டல் பார்வை 🌱">🏡 DECAANBHOOMI - Your Land, Our Digital Vision 🌱</h2>
+                    </div>
+                    <p class="hero-subtitle" data-en="Professional land digitalization services with virtual tours and comprehensive property showcasing solutions for modern real estate needs." data-ta="நவீன ரியல் எஸ்டேட் தேவைகளுக்கான மெய்நிகர் சுற்றுப்பயணங்கள் மற்றும் விரிவான சொத்து காட்சி தீர்வுகளுடன் தொழில்முறை நில டிஜிட்டல்மயமாக்கல் சேவைகள்.">Professional land digitalization services with virtual tours and comprehensive property showcasing solutions for modern real estate needs.</p>
+                </div>
+
+                <!-- Image Carousel -->
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide active">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop" alt="Land Property 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop" alt="Land Property 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=500&fit=crop" alt="Land Property 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=500&fit=crop" alt="Land Property 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&h=500&fit=crop" alt="Land Property 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop" alt="Land Property 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Land Property 7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=500&fit=crop" alt="Land Property 8">
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                        <span class="indicator" onclick="currentSlide(4)"></span>
+                        <span class="indicator" onclick="currentSlide(5)"></span>
+                        <span class="indicator" onclick="currentSlide(6)"></span>
+                        <span class="indicator" onclick="currentSlide(7)"></span>
+                        <span class="indicator" onclick="currentSlide(8)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Land Vision Section -->
+        <section class="land-vision">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="🗺️ Explore Land Vision by Location 🏞️" data-ta="🗺️ இடத்தின் அடிப்படையில் நில பார்வையை ஆராயுங்கள் 🏞️">🗺️ Explore Land Vision by Location 🏞️</h2>
+                    <p data-en="Find the perfect property in your desired location" data-ta="உங்கள் விரும்பிய இடத்தில் சரியான சொத்தைக் கண்டறியுங்கள்">Find the perfect property in your desired location</p>
+                </div>
+
+                <div class="location-filters">
+                    <select id="stateSelect" onchange="handleStateChange()">
+                        <option value="" data-en="Select State" data-ta="மாநிலத்தைத் தேர்ந்தெடுக்கவும்">Select State</option>
+                        <option value="Tamil Nadu" data-en="Tamil Nadu" data-ta="தமிழ்நாடு">Tamil Nadu</option>
+                    </select>
+
+                    <select id="districtSelect" onchange="handleDistrictChange()" class="hidden">
+                        <option value="" data-en="Select District" data-ta="மாவட்டத்தைத் தேர்ந்தெடுக்கவும்">Select District</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="clients">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="🏘️ Our Trusted Clients & Properties 🌟" data-ta="🏘️ எங்கள் நம்பகமான வாடிக்கையாளர்கள் மற்றும் சொத்துக்கள் 🌟">🏘️ Our Trusted Clients & Properties 🌟</h2>
+                    <p data-en="Discover premium properties from our verified partners" data-ta="எங்கள் சரிபார்க்கப்பட்ட கூட்டாளர்களிடமிருந்து பிரீமியம் சொத்துக்களைக் கண்டறியுங்கள்">Discover premium properties from our verified partners</p>
+                </div>
+
+                <div class="clients-grid" id="clientsGrid">
+                    <!-- Clients will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="🌟 About Our Services 🏗️" data-ta="🌟 எங்கள் சேவைகளைப் பற்றி 🏗️">🌟 About Our Services 🏗️</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 data-en="What We Do" data-ta="நாங்கள் என்ன செய்கிறோம்">What We Do</h3>
+                        <p data-en="At Decaanbhoomi, we specialize in comprehensive land digitalization services that transform traditional real estate marketing. We help property promoters showcase their land through cutting-edge digital solutions." data-ta="டெக்கான்பூமியில், பாரம்பரிய ரியல் எஸ்டேட் மார்க்கெட்டிங்கை மாற்றும் விரிவான நில டிஜிட்டல்மயமாக்கல் சேவைகளில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம். அதிநவீன டிஜிட்டல் தீர்வுகள் மூலம் சொத்து விளம்பரதாரர்கள் தங்கள் நிலத்தை காட்சிப்படுத்த உதவுகிறோம்.">At Decaanbhoomi, we specialize in comprehensive land digitalization services that transform traditional real estate marketing. We help property promoters showcase their land through cutting-edge digital solutions.</p>
+                        
+                        <div class="services-list">
+                            <div class="service-item">
+                                <i class="fas fa-camera"></i>
+                                <div>
+                                    <h4 data-en="Virtual Tour Services" data-ta="மெய்நிகர் சுற்றுப்பயண சேவைகள்">Virtual Tour Services</h4>
+                                    <p data-en="Immersive 360° virtual tours of your property" data-ta="உங்கள் சொத்தின் அமுக்கமான 360° மெய்நிகர் சுற்றுப்பயணங்கள்">Immersive 360° virtual tours of your property</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item">
+                                <i class="fas fa-bullhorn"></i>
+                                <div>
+                                    <h4 data-en="Digital Marketing" data-ta="டிஜிட்டல் மார்க்கெட்டிங்">Digital Marketing</h4>
+                                    <p data-en="Professional advertising and branding solutions" data-ta="தொழில்முறை விளம்பரம் மற்றும் பிராண்டிங் தீர்வுகள்">Professional advertising and branding solutions</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <div>
+                                    <h4 data-en="Location Analysis" data-ta="இடம் பகுப்பாய்வு">Location Analysis</h4>
+                                    <p data-en="Detailed area information and connectivity details" data-ta="விரிவான பகுதி தகவல் மற்றும் இணைப்பு விவரங்கள்">Detailed area information and connectivity details</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <h4 data-en="Custom Property Links" data-ta="தனிப்பயன் சொத்து இணைப்புகள்">Custom Property Links</h4>
+                                    <p data-en="Shareable links for easy property promotion" data-ta="எளிதான சொத்து விளம்பரத்திற்கான பகிரக்கூடிய இணைப்புகள்">Shareable links for easy property promotion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="About Us">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="📞 Get in Touch with Us 🤝" data-ta="📞 எங்களுடன் தொடர்பு கொள்ளுங்கள் 🤝">📞 Get in Touch with Us 🤝</h2>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 6380463345</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:deccaanowcorp@gmail.com">deccaanowcorp@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-en="Chat on WhatsApp" data-ta="WhatsApp இல் அரட்டையடிக்கவும்">Chat on WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p data-en="🌍 DECAANBHOOMI - Digitizing Land, Realizing Dreams 🏡" data-ta="🌍 டெக்கான்பூமி - நிலத்தை டிஜிட்டல்மயமாக்குதல், கனவுகளை நனவாக்குதல் 🏡">🌍 DECAANBHOOMI - Digitizing Land, Realizing Dreams 🏡</p>
+                    <p class="copyright" data-en="© 2024 Deccaanow Corp. All rights reserved. | Transforming Real Estate Through Technology" data-ta="© 2024 டெக்கானவ் கார்ப். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. | தொழில்நுட்பத்தின் மூலம் ரியல் எஸ்டேட்டை மாற்றுதல்">© 2024 Deccaanow Corp. All rights reserved. | Transforming Real Estate Through Technology</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
